@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!--<link rel="stylesheet" href="/src/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/src/css/styles.css">
+    <title>Intelligent House Panel</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <a class="navbar-brand" link="#">Intelligent House Panel</a>
+      <span class="navbar-toggler-icon"></span>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-4">
+          <li class="nav-item">
+            <a class="nav-link" data-value="temp_sensors" href="#">Датчики температуры</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" data-value="hum_sensors" href="#">Датчики влажности</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" data-value="gas_sensors" href="#">Датчики газа</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" data-value="light_sensors" href="#">Датчики освещённости</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" data-value="devices" href="#">Устройства</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" data-value="alarms" href="#">Будильники</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="header">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="description">
+          <h1>Добро пожаловать в панель мониторинга Умного дома!
+          <p>На данной странице вы можете узнать показания датчиков, проверить и изменить состояние устройств и  установленных будильников</p>
+          </h1>
+        </div>
+      </div>
+    </header>
+
+
+    <div class="temp_sensors" id="temp_sensors">
+      <div class="container">
+        <h1 class="text-center">Датчики температуры</h1>
+        <table class="table table-hover table-bordered">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Название датчика</th>
+              <th scope="col">Показания</th>
+              <th scope="col">Дата</th>
+            </tr>
+          </thead>
+          <tbody class="temp_sens_table_body">
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <div class="hum_sensors" id="hum_sensors">
+      <div class="container">
+        <h1 class="text-center">Датчики влажности</h1>
+        <table class="table table-hover table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Название датчика</th>
+                <th scope="col">Показания</th>
+                <th scope="col">Дата</th>
+              </tr>
+            </thead>
+            <tbody class="hum_sens_table_body">
+            </tbody>
+          </table>
+      </div>
+    </div>
+    
+    <div class="gas_sensors" id="gas_sensors">
+      <div class="container">
+        <h1 class="text-center">Датчики газа</h1>
+        <table class="table table-hover table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Название датчика</th>
+                <th scope="col">Показания</th>
+                <th scope="col">Дата</th>
+              </tr>
+            </thead>
+            <tbody class="gas_sens_table_body">
+            </tbody>
+          </table>
+      </div>
+    </div>
+
+    <div class="light_sensors" id="light_sensors">
+      <div class="container">
+        <h1 class="text-center">Датчики освещенности</h1>
+        <table class="table table-hover table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Название датчика</th>
+                <th scope="col">Показания</th>
+                <th scope="col">Дата</th>
+              </tr>
+            </thead>
+            <tbody class="light_sens_table_body">
+            </tbody>
+          </table>
+      </div>
+    </div>
+
+    <div class="devices" id="devices">
+      <div class="container">
+        <h1 class="text-center">Устройства</h1>
+        <table class="table table-hover table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Название устройства</th>
+                <th scope="col">Состояние</th>
+                <th scope="col">Изменить состояние</th>
+              </tr>
+            </thead>
+            <tbody class="device_table_body">
+            </tbody>
+          </table>
+      </div>
+    </div>
+
+    <div class="alarms" id="alarms">
+      <div class="container">
+        <h1 class="text-center">Будильники</h1>
+        <table class="table table-hover table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Название</th>
+                <th scope="col">Время</th>
+                <th scope="col">Состояние</th>
+              </tr>
+            </thead>
+            <tbody class="alarm_table_body">
+            </tbody>
+          </table>
+      </div>
+    </div>
+
+
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+    <!--<script src="/src/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
+  </body>
+</html>

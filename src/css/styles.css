@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body{
+	padding: 0;
+	margin: 0;
+	background:#f4f4f4;
+}
+
+html,h1,h2,h3,h4,h5,h6,a{
+	font-family: "Raleway";
+}
+
+.navbar{
+    background:#F97300;
+}
+
+.nav-link, .navbar-brand{
+    color: #f4f4f4;
+    cursor: pointer;
+}
+
+.nav-link{
+    margin-right: 1em !important;
+}
+.nav-link:hover{
+    background: #f4f4f4;
+    color: #f97300;
+}
+.navbar-collapse{
+    justify-content: flex-end;
+}
+.navbar-toggler{
+    background:#fff !important;
+}
+
+.bg-dark{
+    background-color:#343a40!important
+}
+
+.bg-primary{
+    background-color:#343a40!important
+}
+
+.header{
+	position: relative;
+}
+.overlay{
+	position: absolute;
+	min-height: 100%;
+	min-width: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(244, 244, 244, 0.79);
+}
+.description{
+    position: absolute;
+    top: 30%;
+    margin: auto;
+    padding: 2em;
+
+}
+.description h1{
+	color:#F97300 ;
+}
+.description p{
+	color:#666;
+	font-size: 20px;
+	width: 50%;
+	line-height: 1.5;
+}
+
+.temp_sensors{
+	margin: 4em 0;
+	padding: 1em;
+	position: relative;
+}
+.temp_sensors h1{
+	color:#F97300;
+	margin: 2em;
+}
+.temp_sensors img{
+	height: 100%;
+    width: 100%;
+    border-radius: 50%
+}
+.temp_sensors span{
+	display: block;
+	color: #888;
+	position: absolute;
+	left: 115px;
+}
+.temp_sensors .desc{
+	padding: 2em;
+	border-left:4px solid #10828C;
+}
+.temp_sensors .desc h3{
+	color: #10828C;
+}
+.temp_sensors .desc p{
+	line-height:2;
+	color:#888;
+}
+
+.hum_sensors{
+	margin: 4em 0;
+	position: relative;
+}
+.hum_sensors h1{
+	color:#F97300;
+	margin: 2em;
+}
+.hum_sensors img{
+	height: 100%;
+    width: 100%;
+    border-radius: 50%
+}
+.hum_sensors span{
+	display: block;
+	color: #888;
+	position: absolute;
+	left: 115px;
+}
+.hum_sensors .desc{
+	padding: 2em;
+	border-left:4px solid #10828C;
+}
+.hum_sensors .desc h3{
+	color: #10828C;
+}
+.hum_sensors .desc p{
+	line-height:2;
+	color:#888;
+}
+
+
+.gas_sensors{
+	margin: 4em 0;
+	position: relative;
+}
+.gas_sensors h1{
+	color:#F97300;
+	margin: 2em;
+}
+.gas_sensors img{
+	height: 100%;
+    width: 100%;
+    border-radius: 50%
+}
+.gas_sensors span{
+	display: block;
+	color: #888;
+	position: absolute;
+	left: 115px;
+}
+.gas_sensors .desc{
+	padding: 2em;
+	border-left:4px solid #10828C;
+}
+.gas_sensors .desc h3{
+	color: #10828C;
+}
+.gas_sensors .desc p{
+	line-height:2;
+	color:#888;
+}
+
+
+.light_sensors{
+	margin: 4em 0;
+	position: relative;
+}
+.light_sensors h1{
+	color:#F97300;
+	margin: 2em;
+}
+.light_sensors img{
+	height: 100%;
+    width: 100%;
+    border-radius: 50%
+}
+.light_sensors span{
+	display: block;
+	color: #888;
+	position: absolute;
+	left: 115px;
+}
+.light_sensors .desc{
+	padding: 2em;
+	border-left:4px solid #10828C;
+}
+.light_sensors .desc h3{
+	color: #10828C;
+}
+.light_sensors .desc p{
+	line-height:2;
+	color:#888;
+}
+
+.devices{
+	margin: 4em 0;
+	position: relative;
+}
+.devices h1{
+	color:#F97300;
+	margin: 2em;
+}
+.devices img{
+	height: 100%;
+    width: 100%;
+    border-radius: 50%
+}
+.devices span{
+	display: block;
+	color: #888;
+	position: absolute;
+	left: 115px;
+}
+.devices .desc{
+	padding: 2em;
+	border-left:4px solid #10828C;
+}
+.devices .desc h3{
+	color: #10828C;
+}
+.devices .desc p{
+	line-height:2;
+	color:#888;
+}
+
+
+.alarms{
+	margin: 4em 0;
+	position: relative;
+}
+.alarms h1{
+	color:#F97300;
+	margin: 2em;
+}
+.alarms img{
+	height: 100%;
+    width: 100%;
+    border-radius: 50%
+}
+.alarms span{
+	display: block;
+	color: #888;
+	position: absolute;
+	left: 115px;
+}
+.alarms .desc{
+	padding: 2em;
+	border-left:4px solid #10828C;
+}
+.alarms .desc h3{
+	color: #10828C;
+}
+.alarms .desc p{
+	line-height:2;
+	color:#888;
+}
