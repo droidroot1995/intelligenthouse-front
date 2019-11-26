@@ -163,7 +163,7 @@ def main():
 
                 if ts.isdigit():
                     ts = int(ts)
-                if 0 <= ts < len(temperature_sensors):
+                if 0 <= ts <= len(temperature_sensors):
                     msg['temp_sensor'] = ts
                     break
 
@@ -189,7 +189,7 @@ def main():
 
                 if hs.isdigit():
                     hs = int(hs)
-                if 0 <= hs < len(humidity_sensors):
+                if 0 <= hs <= len(humidity_sensors):
                     msg['hum_sensor'] = hs
                     break
 
@@ -215,7 +215,7 @@ def main():
 
                 if gs.isdigit():
                     gs = int(gs)
-                if 0 <= gs < len(gas_sensors):
+                if 0 <= gs <= len(gas_sensors):
                     msg['gas_sensor'] = gs
                     break
 
@@ -241,7 +241,7 @@ def main():
 
                 if ls.isdigit():
                     ls = int(ls)
-                if 0 <= ls < len(light_sensors):
+                if 0 <= ls <= len(light_sensors):
                     msg['light_sensor'] = ls
                     break
 
