@@ -9,6 +9,7 @@
     <!--<link rel="stylesheet" href="/src/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/src/css/styles.css">
+    <script src="/src/js/main.js"></script>
     <title>Intelligent House Panel</title>
   </head>
   <body>
@@ -68,11 +69,15 @@
               <th scope="col">Дата</th>
             </tr>
           </thead>
-          <tbody class="temp_sens_table_body">
+          <tbody class="temp_sens_table_body" id="tsensors_table_body">
           </tbody>
         </table>
       </div>
     </div>
+
+    <script>
+        getTemperatureSensors()
+    </script>
     
     <div class="hum_sensors" id="hum_sensors">
       <div class="container">
@@ -86,11 +91,15 @@
                 <th scope="col">Дата</th>
               </tr>
             </thead>
-            <tbody class="hum_sens_table_body">
+            <tbody class="hum_sens_table_body" id="hsensors_table_body">
             </tbody>
           </table>
       </div>
     </div>
+
+    <script>
+        getHumiditySensors()
+    </script>
     
     <div class="gas_sensors" id="gas_sensors">
       <div class="container">
@@ -104,11 +113,15 @@
                 <th scope="col">Дата</th>
               </tr>
             </thead>
-            <tbody class="gas_sens_table_body">
+            <tbody class="gas_sens_table_body" id="gsensors_table_body">
             </tbody>
           </table>
       </div>
     </div>
+
+    <script>
+        getGasSensors()
+    </script>
 
     <div class="light_sensors" id="light_sensors">
       <div class="container">
@@ -122,11 +135,15 @@
                 <th scope="col">Дата</th>
               </tr>
             </thead>
-            <tbody class="light_sens_table_body">
+            <tbody class="light_sens_table_body" id="lsensors_table_body">
             </tbody>
           </table>
       </div>
     </div>
+
+    <script>
+        getLightSensors()
+    </script>
 
     <div class="devices" id="devices">
       <div class="container">
@@ -137,14 +154,17 @@
                 <th scope="col">#</th>
                 <th scope="col">Название устройства</th>
                 <th scope="col">Состояние</th>
-                <th scope="col">Изменить состояние</th>
               </tr>
             </thead>
-            <tbody class="device_table_body">
+            <tbody class="device_table_body" id="devices_table_body">
             </tbody>
           </table>
       </div>
     </div>
+
+    <script>
+        getDevices()
+      </script>
 
     <div class="alarms" id="alarms">
       <div class="container">
@@ -158,13 +178,15 @@
                 <th scope="col">Состояние</th>
               </tr>
             </thead>
-            <tbody class="alarm_table_body">
+            <tbody class="alarm_table_body" id="alarms_table_body">
             </tbody>
           </table>
       </div>
     </div>
 
-
+    <script>
+        getAlarms()
+    </script>
     
 
     <!-- Optional JavaScript -->

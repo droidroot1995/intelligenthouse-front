@@ -16,7 +16,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "webpack-dev-server --mode=development --hot",
+    "start": "webpack-dev-server --host 0.0.0.0 --port 3000 --mode=development --hot",
     "build": "webpack --mode=development",
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "lint": "npm run lint:js",
