@@ -1,3 +1,7 @@
+/* eslint-disable no-await-in-loop */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-plusplus */
+/* eslint-disable prefer-destructuring */
 const TS_API_URL = 'http://localhost:8000/tsensor/'
 const HS_API_URL = 'http://localhost:8000/hsensor/'
 const LS_API_URL = 'http://localhost:8000/lsensor/'
@@ -33,6 +37,8 @@ const getTemperatureSensors = () => {
     tsensorsTable.innerHTML = body
 }
 
+setTimeout(() => getTemperatureSensors(), 100)
+
 const gts = setInterval(() => getTemperatureSensors(), 10000)
 
 const getHumiditySensors = () => {
@@ -53,6 +59,8 @@ const getHumiditySensors = () => {
 
     hsensorsTable.innerHTML = body
 }
+
+setTimeout(() => getHumiditySensors(), 100)
 
 const ghs = setInterval(() => getHumiditySensors(), 10000)
 
@@ -76,6 +84,8 @@ const getLightSensors = () => {
     lsensorsTable.innerHTML = body
 }
 
+setTimeout(() => getLightSensors(), 100)
+
 const gls = setInterval(() => getLightSensors(), 10000)
 
 
@@ -98,6 +108,7 @@ const getGasSensors = () => {
     gsensorsTable.innerHTML = body
 }
 
+setTimeout(() => getGasSensors(), 100)
 const ggs = setInterval(() => getGasSensors(), 10000)
 
 const getDevices = () => {
@@ -124,6 +135,7 @@ const getDevices = () => {
     devicesTable.innerHTML = body
 }
 
+setTimeout(() => getDevices(), 100)
 const gd = setInterval(() => getDevices(), 10000)
 
 const getAlarms = () => {
@@ -150,4 +162,59 @@ const getAlarms = () => {
     alarmsTable.innerHTML = body
 }
 
+
+setTimeout(() => getAlarms(), 100)
 const ga = setInterval(() => getAlarms(), 10000)
+
+async function onSaveDevicesButtonClicked(e) {
+    let id = 0
+    let data = {}
+
+    const devicesTable = document.getElementById('devices_table_body')
+
+    const rows = devicesTable.rows
+
+    for(let i = 0; i < rows.length; i++){
+        data = {}
+        const cols = rows[i].find('td')
+        id = cols[0]
+        data.name = cols[1]
+        if(cols[2].prop('checked')){
+            data.state = true
+        }
+        else {
+            data.state = false
+        }
+
+        await fetch(`${D_API_URL}update/${id}`, {method: 'POST', body: data, headers: { 'Content-Type': 'application/json'}})
+        .then(resp => resp.json())
+        .then(dat => console.log(dat))
+    }
+}
+
+async function onSaveAlarmsButtonClicked(e)  {
+    let id = 0
+    let data = {}
+
+    const alarmsTable = document.getElementById('alarms_table_body')
+
+    const rows = alarmsTable.rows
+
+    for(let i = 0; i < rows.length; i++){
+        data = {}
+        const cols = rows[i].find('td')
+        id = cols[0]
+        data.name = cols[1]
+        data.time = cols[2]
+        if(cols[3].prop('checked')){
+            data.state = true
+        }
+        else {
+            data.state = false
+        }
+
+        await fetch(`${D_API_URL}update/${id}`, {method: 'POST', body: data, headers: { 'Content-Type': 'application/json'}})
+        .then(resp => resp.json())
+        .then(dat => console.log(dat))
+    }
+}
