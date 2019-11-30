@@ -167,7 +167,7 @@ def main():
                     msg['temp_sensor'] = ts
                     break
 
-            print('Введите значение температуры:')
+            print('Введите значение температуры а градусах:')
             while(True):
                 data = str.strip(input('>>>'))
 
@@ -219,7 +219,7 @@ def main():
                     msg['gas_sensor'] = gs
                     break
 
-            print('Введите значение углекислого газа(0-100%):')
+            print('Введите значение уровня углекислого газа (ppm):')
             while(True):
                 data = str.strip(input('>>>'))
 
@@ -245,7 +245,7 @@ def main():
                     msg['light_sensor'] = ls
                     break
 
-            print('Введите значение освещённости (0-100%):')
+            print('Введите значение освещённости (lux):')
             while(True):
                 data = str.strip(input('>>>'))
 
